@@ -22,7 +22,13 @@ function generateGrid() {
       square.className = 'square';
       gridContainer.appendChild(square);
 
-      square.onclick = () => paint(square, 'red');
+      square.onclick = () => {
+        if (square.style.backgroundColor === 'red') {
+            square.style.backgroundColor = 'lightblue'; // original color
+        } else {
+            square.style.backgroundColor = 'red';
+        }
+      };
     }
 }
 
